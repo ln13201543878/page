@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+	<struts>
+	<constant name="struts.devMode" value="true"> </constant>
+	<package name="default" extends="struts-default" strict-method-invocation="false">
+	<action name="*_*"  class="web.{1}Action" method="{2}">
+	<result name="findUI" type="dispatcher">list.jsp </result>
+	<result name="edit" type="dispatcher">edit.jsp</result>
+	<result name="findAll" type="redirectAction">{1}_findAll</result>
+	
+	    
+	</action>
+	
+	</package>
+	</struts>
